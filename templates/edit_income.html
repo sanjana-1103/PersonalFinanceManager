@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Edit Income</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="container mt-5">
+
+<h2>Edit Income</h2>
+
+<form method="POST">
+
+    <div class="mb-3">
+        <label>Amount</label>
+        <input
+            type="number"
+            class="form-control"
+            name="amount"
+            value="{{ income['amount'] }}"
+            required>
+    </div>
+
+    <div class="mb-3">
+        <label>Source</label>
+        <input
+            type="text"
+            class="form-control"
+            name="source"
+            value="{{ income['source'] }}"
+            required>
+    </div>
+
+    <div class="mb-3">
+        <label>Note</label>
+        <textarea
+            class="form-control"
+            name="note">{{ income['note'] }}</textarea>
+    </div>
+
+    <button class="btn btn-success">
+        Update Income
+    </button>
+
+    <a href="/history" class="btn btn-secondary">
+        Cancel
+    </a>
+
+</form>
+
+</body>
+</html>

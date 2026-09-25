@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+<nav class="navbar navbar-dark bg-primary">
+    <div class="container">
+
+        <span class="navbar-brand">
+            💰 Personal Finance Manager
+        </span>
+
+        <a href="/" class="btn btn-light">
+            Logout
+        </a>
+
+    </div>
+</nav>
+
+<div class="container mt-4">
+
+    <h2 class="fw-bold">Welcome to Your Dashboard</h2>
+
+    <p class="text-muted">
+        Manage your income and expenses easily.
+    </p>
+
+    <div class="row mt-4">
+
+        <!-- Total Income -->
+        <div class="col-md-3">
+            <div class="card text-bg-success mb-3 shadow">
+                <div class="card-body">
+                    <h5>Total Income</h5>
+                    <h3>₹{{ total_income }}</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Total Expense -->
+        <div class="col-md-3">
+            <div class="card text-bg-danger mb-3 shadow">
+                <div class="card-body">
+                    <h5>Total Expense</h5>
+                    <h3>₹{{ total_expense }}</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Balance -->
+        <div class="col-md-3">
+            <div class="card text-bg-primary mb-3 shadow">
+                <div class="card-body">
+                    <h5>Balance</h5>
+                    <h3>₹{{ balance }}</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- This Month -->
+        <div class="col-md-3">
+            <div class="card text-bg-warning mb-3 shadow">
+                <div class="card-body">
+                    <h5>This Month</h5>
+                    <h3>Coming Soon</h3>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <hr class="my-4">
+
+    <div class="text-center">
+
+        <a href="/expense" class="btn btn-danger btn-lg m-2">
+            ➕ Add Expense
+        </a>
+
+        <a href="/income" class="btn btn-success btn-lg m-2">
+            💵 Add Income
+        </a>
+
+        <a href="/history" class="btn btn-dark btn-lg m-2">
+            📋 Transaction History
+        </a>
+
+        <a href="/reports" class="btn btn-primary btn-lg m-2">
+            📊 Reports
+        </a>
+
+        <a href="/calendar" class="btn btn-info">
+         📅 Expense Calendar
+        </a>
+
+        <a href="/savings" class="btn btn-warning">
+         🎯 Savings Goal
+        </a>
+
+        <a href="/reminders" class="btn btn-danger">
+         🔔 Bill Reminders
+        </a>
+
+        <a href="/logout" class="btn btn-danger">
+            Logout
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Expense</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="container mt-5">
+
+<h2>Edit Expense</h2>
+
+<form method="POST">
+
+<div class="mb-3">
+    <label>Amount</label>
+    <input
+        type="number"
+        class="form-control"
+        name="amount"
+        value="{{ expense['amount'] }}"
+        required>
+</div>
+
+<div class="mb-3">
+    <label>Category</label>
+
+    <input
+        type="text"
+        class="form-control"
+        name="category"
+        value="{{ expense['category'] }}"
+        required>
+
+</div>
+
+<div class="mb-3">
+    <label>Note</label>
+
+    <textarea
+        class="form-control"
+        name="note">{{ expense['note'] }}</textarea>
+
+</div>
+
+<button class="btn btn-warning">
+    Update Expense
+</button>
+
+<a href="/history" class="btn btn-secondary">
+    Cancel
+</a>
+
+</form>
+
+</body>
+</html>

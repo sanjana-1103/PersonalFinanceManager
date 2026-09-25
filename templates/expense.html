@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Expense</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="container mt-5">
+
+<h2>Add Expense</h2>
+
+<form method="POST" action="/expense">
+
+<div class="mb-3">
+    <label>Amount</label>
+    <input type="number" class="form-control" name="amount" required>
+</div>
+
+<div class="mb-3">
+    <label>Category</label>
+
+    <select class="form-select" name="category">
+
+        <option>Food</option>
+        <option>Home</option>
+        <option>Shopping</option>
+        <option>Medical</option>
+        <option>Entertainment</option>
+        <option>Travel</option>
+        <option>Bills</option>
+        <option>Others</option>
+
+    </select>
+
+</div>
+
+<div class="mb-3">
+    <label>Note</label>
+    <textarea class="form-control" name="note"></textarea>
+</div>
+
+<div class="d-grid gap-2">
+
+    <button type="submit" class="btn btn-danger">
+        💾 Save Expense
+    </button>
+
+    <a href="/dashboard" class="btn btn-secondary">
+        ← Back to Dashboard
+    </a>
+
+</div>
+
+</form>
+
+</body>
+</html>

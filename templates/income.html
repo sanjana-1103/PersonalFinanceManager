@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Income</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="container mt-5">
+
+<h2>Add Income</h2>
+
+<form action="/income" method="POST">
+
+    <div class="mb-3">
+        <label>Amount</label>
+        <input
+            type="number"
+            name="amount"
+            class="form-control"
+            required>
+    </div>
+
+    <div class="mb-3">
+        <label>Source</label>
+        <input
+            type="text"
+            name="source"
+            class="form-control"
+            required>
+    </div>
+
+    <div class="mb-3">
+        <label>Note</label>
+        <textarea
+            name="note"
+            class="form-control"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-success">
+        Save Income
+    </button>
+
+</form>
+
+</body>
+</html>
